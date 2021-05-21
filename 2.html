@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web_VR_2</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body>
+    
+    
+        <a-scene>
+            
+            <a-assets>
+                <img id="a1" src="/resources/1.jpg" alt="Mundo_1">
+                <img id="a2" src="/resources/2.jpg" alt="Mundo_2">
+                <img id="a3" src="/resources/3.jpg" alt="batman">
+                <img id="a4" src="/resources/4.jpg" alt="mujer">
+                <img id="a5" src="/resources/5.jpg" alt="flash">
+                <img id="a6" src="./resources/clic.jpg">
+                
+            </a-assets>
+            
+           <a-sphere onclick="show('a1')" rotation="0 70 0" src="#a1" class="link" position="2 4 -6" ></a-sphere>
+           <a-sphere onclick="show('a2')" rotation="0 210 0" src="#a2" class="link" position="-2 4 -6" ></a-sphere>
+           <a-sphere onclick="show('a3')" rotation="-5 5 0" src="#a3" class="link" position="4 0 -6" ></a-sphere>
+           <a-sphere onclick="show('a4')" rotation="0 -80 30" src="#a4" class="link" position="0 0 -6" ></a-sphere>
+           <a-sphere onclick="show('a5')" rotation="-15 250 0" src="#a5" class="link" position="-4 0 -6" ></a-sphere>
+           <a-plane onclick="redireccionar(2)" position="0 5 -9"  color="#B9F805" src="#a6"></a-plane>
+           
+            <a-camera>
+                <a-cursor color="#B9F805"></a-cursor>
+            </a-camera>
+            <a-sky rotation="0 320 0" src="#a3" id="cielo"></a-sky>
+        </a-scene>
+       
+</body>
+</html>
